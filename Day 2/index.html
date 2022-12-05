@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="jsfiles/p5.min.js"></script>
+    <script type="text/javascript">
+        new p5(); 
+    </script>
+    <link rel="stylesheet" type="text/css" href="jsfiles/style.css">
+    <meta charset="utf-8">
+
+
+    <title>Binary Tree Visualization</title>
+</head>
+
+<body>
+    <script src="jsfiles/main.js"></script>
+    <script src="jsfiles/main2.js"></script>
+    <script src="jsfiles/vertex.js"></script>
+    <script src="jsfiles/theme.js"></script>
+
+    <div class="t" align="center">
+        <h1>Binary Tree Visualizer</h1>
+
+
+    </div>
+    <br>
+    <div align="center" id="canvas-placeholder"></div>
+    <br>
+    <div id="controls">
+        <button id="add-btn">Add</button>
+        <button id="clear-btn">Clear</button>
+        <button id="slow-fill-btn">Random</button>
+        <button id="search-btn">Search</button>
+        <button id="quick-fill-btn">Fast add (without animation)</button>
+
+
+
+
+
+        <span id="speed-label">Animation Speed:</span>
+        <span id="rangeValue">0.5</span><br>
+        <input id="speed-slider" type="range" min="0" max="1.5" step="0.1" value="0.5" onChange="rangeSlide(this.value)"
+            onmousemove="rangeSlide(this.value)"></input>
+        <button id="themeButton" onclick="toggleTheme()">Theme</button>
+    </div>
+
+    <script type="text/javascript">
+        function rangeSlide(value) {
+            document.getElementById('rangeValue').innerHTML = value;
+        }
+    </script>
+</body>
+
+</html>
